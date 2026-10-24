@@ -72,7 +72,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
 
       - name: Debloat VPS (sisa agen cloud, cache, bebaskan disk)
         continue-on-error: true
@@ -111,7 +111,7 @@ jobs:
       - name: Upload state sebagai artifact
         if: always()
         continue-on-error: true
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v4
         with:
           name: vpsfree-state
           path: out/vps-state.tar.gz
